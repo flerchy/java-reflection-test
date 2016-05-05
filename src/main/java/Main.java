@@ -12,7 +12,7 @@ public class Main {
 
         for (Constructor<?> constructor : constructors) {
             out.println(constructor.getName());
-            System.out.println(constructor.getParameterCount());
+            out.println(constructor.getParameterCount());
         }
 
 
