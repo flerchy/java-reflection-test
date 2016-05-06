@@ -1,31 +1,31 @@
-import java.lang.reflect.Constructor;
 import static java.lang.System.*;
-import java.awt.*;
-import java.applet.*;
 
 /**
  * Created by flerchy on 01.05.2016.
  */
 public class Main {
     public static void main(String[] args) {
-        Constructor<?>[] constructors = Nya.class.getConstructors();
-
-        for (Constructor<?> constructor : constructors) {
-            out.println(constructor.getName());
-            out.println(constructor.getParameterCount());
-        }
-
-
+        out.println("Main OK");
     }
 }
 
 class Nya {
-    int a;
+    Integer a;
+    Double b;
 
-    public Nya(int a) {
-        this.a = a;
+
+    private Nya() {
+        a = 25;
+        b = 2.5;
     }
 
-    public Nya() {
+    public Nya(Integer a) {
+        this.a = a;
+        this.b = 2.5;
+    }
+
+    private Nya(Integer a, Double b) {
+        this.a = a;
+        this.b = b;
     }
 }
